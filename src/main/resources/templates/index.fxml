@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="603.0" prefWidth="848.0" style="-fx-background-color: F0F1C5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gm.tareas.controlador.IndexControlador">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="1.0" layoutY="44.0" prefHeight="38.0" prefWidth="848.0" style="-fx-background-color: E9DFC3;" text="Sistema de Tareas" textFill="#e63946">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font></Label>
+      <TableView fx:id="tareaTabla" layoutX="286.0" layoutY="132.0" onMouseClicked="#cargarTareaFormulario" prefHeight="252.0" prefWidth="539.0">
+        <columns>
+          <TableColumn fx:id="idTareaColumna" prefWidth="34.0" text="ID" />
+          <TableColumn fx:id="nombreTareaColumna" prefWidth="259.0" text="Tarea" />
+            <TableColumn fx:id="responsableColumna" prefWidth="140.0" text="Responsable" />
+            <TableColumn fx:id="estatusColumna" prefWidth="103.0" text="Estatus" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="32.0" layoutY="132.0" prefHeight="252.0" prefWidth="227.0" style="-fx-background-color: F8F8E1; -fx-border-style: solid; -fx-border-color: E9DFC3;">
+         <children>
+            <Label layoutX="93.0" layoutY="29.0" text="Tarea" textFill="#457b9b">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="69.0" layoutY="99.0" text="Responsable" textFill="#457b9b">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="88.0" layoutY="166.0" text="Estatus" textFill="#457b9b">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <TextField fx:id="nombreTareaTexto" layoutX="39.0" layoutY="63.0" />
+            <TextField fx:id="responsableTexto" layoutX="40.0" layoutY="129.0" />
+            <TextField fx:id="estatusTexto" layoutX="39.0" layoutY="198.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="29.0" layoutY="474.0" prefHeight="63.0" prefWidth="799.0" style="-fx-background-color: F8F8E1; -fx-border-style: solid; -fx-border-color: E9DFC3;">
+         <children>
+            <Button fx:id="agregarBoton" layoutX="62.0" layoutY="15.0" mnemonicParsing="false" onAction="#agregarTarea" style="-fx-background-color: #56ab5c; -fx-border-style: solid;" text="Agregar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="modificarBoton" layoutX="236.0" layoutY="15.0" mnemonicParsing="false" onAction="#modificarTarea" style="-fx-background-color: FFB22C; -fx-border-style: solid;" text="Modificar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="eliminarBoton" layoutX="414.0" layoutY="15.0" mnemonicParsing="false" onAction="#eliminarTarea" style="-fx-background-color: E55050; -fx-border-style: solid;" text="Eliminar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="limpiarBoton" layoutX="584.0" layoutY="15.0" mnemonicParsing="false" onAction="#limpiarFormularioBoton" style="-fx-background-color: EF88AD; -fx-border-style: solid;" text="Limpiar Formulario" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
